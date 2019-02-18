@@ -1,0 +1,30 @@
+spring:
+profiles:
+active: dev
+
+---
+
+spring:
+profiles: dev
+
+startRoute: timer:hello?period=10s
+fromRoute: file:data/input?delete=true&readLock=none
+toRoute: file:data/output
+message: DEV env
+---
+spring:
+profiles: qa
+
+startRoute: timer:hello?period=10s
+fromRoute: file:data/input?delete=true&readLock=none
+toRoute: file:data/output
+message: QA env
+---
+
+spring:
+profiles: prod
+
+startRoute: timer:hello?period=10s
+fromRoute:file: data/input?delete=true&readLock=none
+toRoute: file:data/output
+message: PROD env

@@ -1,0 +1,2 @@
+type,sku#,itemdescripton,price
+UPDATE,100,SamsungTV,600
